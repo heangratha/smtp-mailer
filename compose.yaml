@@ -1,0 +1,22 @@
+version: "3"
+
+networks:
+  docker-net:
+    name: docker-net
+
+services:
+  phpmailer:
+    image: php:8.1.26-apache
+    ports:
+      - "80:80"
+    networks:
+      - docker-net
+    volumes:
+      - ./smtp:/var/www/html
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    networks:
+      - docker-net
+    ports:
+      - "8025:8025"
