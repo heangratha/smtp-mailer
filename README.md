@@ -38,7 +38,7 @@ SMTP AUTHENTICATION TEST
   ```
 
 ## Start docker containers
-This will pull two docker images one is ```php:8.1.26-apache``` and ```mailhog/mailhog:latest```
+This will pull two docker images one is ```php:8.2-apache``` and ```mailhog/mailhog:latest```
 
 Two TCP ports will open on local computer ```80``` webserver, ```8025``` Mailhog box
 
