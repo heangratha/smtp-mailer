@@ -3,6 +3,7 @@ version: "3"
 networks:
   docker-net:
     name: docker-net
+    external: true
 
 services:
   phpmailer:
@@ -13,6 +14,7 @@ services:
       - docker-net
     volumes:
       - ./smtp:/var/www/html
+      - ./000-default.conf:/etc/apache2/sites-enabled/000-default.conf
 
   mailhog:
     image: mailhog/mailhog:latest
